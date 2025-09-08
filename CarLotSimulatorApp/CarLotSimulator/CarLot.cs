@@ -5,17 +5,17 @@ namespace CarLotSimulator;
 
 public class CarLot
 {
-    private List<Car> Cars =  new List<Car>();
+    private List<Car> _cars =  new List<Car>();
     public static int numberOfCars;
 
-    public void addCar(Car car)
+    public void AddCar(Car car)
     {
-        Cars.Add(car);
+        _cars.Add(car);
     }
 
-    public void nameCar()
+    public void ListCar()
     {
-        foreach (Car car in Cars)
+        foreach (Car car in _cars)
         {
             Console.WriteLine(car.Make);
             Console.WriteLine(car.Model);
