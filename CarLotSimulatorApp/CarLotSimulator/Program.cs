@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace CarLotSimulator
 {
@@ -17,20 +18,31 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
+            CarLot carLot1 = new CarLot();
             Car car1 = new Car()
             {
                 Year = 2015, EngineNoise = "VRRRRRRRMMMMMMMM", HonkNoise = "HOOOONNNNNNKKKKK", IsDriveable = true,
                 Make = "Honda", Model = "Accord"
             };
+            carLot1.addCar(car1);
+            Console.WriteLine(CarLot.numberOfCars);
+            
             Car car2 = new Car()
             {
                 Year = 2006, EngineNoise = "*Really Loud* VVVVVVRRRRRRRRRRRRRRMMMMMMMMMMMMM", HonkNoise = "beep",
                 IsDriveable = false, Model = "Tuscan", Make = "Hyundai"
             };
+            carLot1.addCar(car2);
+            Console.WriteLine(CarLot.numberOfCars);
+            
             Car car3 = new Car()
             {
                 Year = 2024, EngineNoise = "pppbbbttt", HonkNoise = "beep beep",  IsDriveable = true, Make = "Vespa", Model = "Primavera 50"
             };
+            carLot1.addCar(car3);
+            Console.WriteLine(CarLot.numberOfCars);
+            
+            carLot1.nameCar();
             
             car1.MakeEngineNoise();
             car2.MakeEngineNoise();
